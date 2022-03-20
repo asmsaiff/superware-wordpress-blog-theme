@@ -23,6 +23,9 @@ a,a:hover {
 section {
 	margin-bottom:20px;
 }
+.w-auto {
+	width: auto !important;
+}
 .section-title h2 {
 	border-bottom:1px solid rgba(0,0,0,.15);
 	margin-bottom:25px;
@@ -189,16 +192,16 @@ span.post-name a,span.post-read-more a:hover {
 	font-size:0.9rem;
 }
 .mediumnavigation .search-icon {
-	margin-left:-40px;
-	display:inline-block;
-	margin-top:3px;
-	cursor:pointer;
+	margin-left: -40px;
+	display: inline-block;
+	margin-top: -4px;
+	cursor: pointer;
 }
 .mediumnavigation .navbar-brand img {
 	max-height:30px;
 	margin-right:5px;
 }
-.mainheading h1.sitetitle {
+.sitetitle {
 	font-family:Righteous;
 }
 .mainheading h1.posttitle {
@@ -440,4 +443,17 @@ ul.tags li a:hover {
 	line-height:22px;
 	border-radius:50%;
 	font-size:12px;
+}
+
+/* Custom */
+
+a.text-primary.text-sm.nav-menu-create-notice {
+	font-size: 14px;
+	margin-top: 8px;
+}
+
+@media screen and (max-width: 576px) {
+	.navContainer {
+		width: 100%;
+	}
 }
