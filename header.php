@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico">
-    <title>Mediumish - A Medium style template by WowThemes.net</title>
     <!-- Bootstrap core CSS -->
     <link href="<?php echo get_template_directory_uri(); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Fonts -->
@@ -17,7 +13,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <!-- Begin Nav ================================================== -->
     <nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
         

@@ -1,5 +1,6 @@
 <?php
     get_template_part('lib/mediumish-nav');
+    get_template_part('inc/mediumish-plugins');
 
     if(!function_exists('mediumish_theme_setup')) {
         function mediumish_theme_setup() {
@@ -35,3 +36,10 @@
         }
         add_action('after_setup_theme', 'mediumish_theme_setup');
     }
+
+    function mediumish_assets() {
+        // Stylesheet Enqueue
+        wp_enqueue_style('mediumish-theme-css', get_template_directory_uri() . "");
+        wp_enqueue_style('mediumish-theme-css', get_stylesheet_uri());
+    }
+    add_action( 'wp_enqueue_scripts', 'mediumish_assets' );
