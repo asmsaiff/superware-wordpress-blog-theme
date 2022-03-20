@@ -20,43 +20,52 @@
 <body>
     <!-- Begin Nav ================================================== -->
     <nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-            data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="container">
-            <!-- Begin Logo -->
+        
+        <div class="container navContainer ml-0 ml-sm-auto">
+            <button class="navbar-toggler navbar-toggler-right shadow-none border-0" type="button" data-toggle="collapse"
+                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo">
+                <?php
+                    if(current_theme_supports('custom-logo')) {
+                        $mediumish_custom_logo_id = get_theme_mod( 'custom_logo' );
+                        $logo = wp_get_attachment_image_src( $mediumish_custom_logo_id , 'full' );
+
+                        if($logo) {
+                ?>
+                <img src="<?php echo esc_url($logo[0]); ?>" class="img-fluid" alt="">
+                <?php
+                        } else {
+                ?>
+                <h1 class="sitetitle">
+                    <?php _e('m', 'mediumish'); ?>
+                </h1>
+                <?php
+                        }
+                    }
+                ?>
             </a>
-            <!-- End Logo -->
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <!-- Begin Menu -->
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Stories <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="post.html">Post</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="author.html">Author</a>
-                    </li>
-                </ul>
-                <!-- End Menu -->
-                <!-- Begin Search -->
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <span class="search-icon">
-                        <svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25">
-                            <path
-                                d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z">
-                            </path>
-                        </svg>
-                    </span>
+            <div class="collapse navbar-collapse w-auto ml-auto" id="navbarsExampleDefault">
+                <?php
+                    if(has_nav_menu('primary-menu')) {
+                        wp_nav_menu(array(
+                            'theme_location'            =>  'primary-menu',
+                            'menu_class'                =>  '',
+                            'menu-container'            =>  'false',
+                            'fallback_cb'               => '__return_false',
+                            'items_wrap'                => '<ul id="%1$s" class="navbar-nav ml-auto %2$s">%3$s</ul>',
+                            'depth'                     => 2,
+                            'walker'                    => new mediumish_wp_nav_menu_walker(),
+                        ));
+                    } else {
+                        echo '<a class="text-primary text-sm nav-menu-create-notice" href="'.home_url('/wp-admin/nav-menus.php').'">Create nav menu first</a>';
+                    }
+                ?>
+
+                <form class="form-inline my-2 my-lg-0 d-none d-lg-block position-relative">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
                 </form>
-                <!-- End Search -->
             </div>
         </div>
     </nav>

@@ -1,4 +1,6 @@
 <?php
+    get_template_part('lib/mediumish-nav');
+
     if(!function_exists('mediumish_theme_setup')) {
         function mediumish_theme_setup() {
             // Load Theme TextDomain
