@@ -4,12 +4,7 @@
 
     <!-- Begin Site Title -->
     <div class="container">
-        <div class="mainheading">
-            <h1 class="sitetitle">Mediumish</h1>
-            <p class="lead">
-                Bootstrap theme, medium style, simply perfect for bloggers
-            </p>
-        </div>
+        <?php get_template_part( '/template-parts/page', 'title' ); ?>
         <!-- End Site Title -->
 
         <!-- Begin Featured -->
