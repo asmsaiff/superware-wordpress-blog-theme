@@ -1,2 +1,3 @@
 <?php
-    echo "This is mediumish theme";
+    get_header();
+    get_footer();

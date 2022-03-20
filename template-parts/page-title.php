@@ -1,0 +1,6 @@
+<div class="mainheading">
+    <h1 class="sitetitle">Mediumish</h1>
+    <p class="lead">
+        Bootstrap theme, medium style, simply perfect for bloggers
+    </p>
+</div>
