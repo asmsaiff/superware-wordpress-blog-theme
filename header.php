@@ -42,7 +42,7 @@
                             'theme_location'            =>  'primary-menu',
                             'menu_class'                =>  '',
                             'menu-container'            =>  'false',
-                            'fallback_cb'               => '__return_false',
+                            'fallback_cb'               => 'mediumish_wp_nav_menu_walker::fallback',
                             'items_wrap'                => '<ul id="%1$s" class="navbar-nav ml-auto %2$s">%3$s</ul>',
                             'depth'                     => 2,
                             'walker'                    => new mediumish_wp_nav_menu_walker(),
