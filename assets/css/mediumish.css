@@ -336,10 +336,14 @@ ul.tags li {
 	font-size:0.9rem;
 }
 ul.tags li a {
-	background:rgba(0,0,0,.05);
-	color:rgba(0,0,0,.6);
-	border-radius:3px;
-	padding:5px 10px;
+    background: rgba(0,0,0,.05);
+    color: rgba(0,0,0,.6);
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+ul.tags li:first-child a {
+	margin-left: 0;
 }
 ul.tags li a:hover {
 	background:rgba(0,0,0,.07);
