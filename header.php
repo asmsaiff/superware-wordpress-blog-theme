@@ -51,7 +51,7 @@
                         echo '<a class="text-primary text-sm nav-menu-create-notice" href="'.home_url('/wp-admin/nav-menus.php').'">Create nav menu first</a>';
                     }
 
-                    get_template_part( "/template-parts/searchForm" );
+                    get_template_part( "/template-parts/mediumish-search", "form" );
                 ?>
             </div>
         </div>

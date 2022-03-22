@@ -1,6 +1,7 @@
 <?php
     require_once(get_theme_file_path("lib/mediumish-nav.php"));
     get_template_part("inc/mediumish-plugins");
+    get_template_part("inc/mediumish-functions");
 
     if ( site_url() == "http://localhost/mediumish" ) {
         define( "VERSION", time() );
