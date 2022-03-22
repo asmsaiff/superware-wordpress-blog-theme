@@ -5399,9 +5399,9 @@ tbody.collapse.show {
 
 @media (min-width: 576px) {
     .card-columns {
-        -webkit-column-count: 3;
-        -moz-column-count: 3;
-        column-count: 3;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
         -webkit-column-gap: 1.25rem;
         -moz-column-gap: 1.25rem;
         column-gap: 1.25rem;
@@ -5411,6 +5411,14 @@ tbody.collapse.show {
         display: inline-block;
         width: 100%;
         margin-bottom: 0.75rem;
+    }
+}
+
+@media (min-width: 991px) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
     }
 }
 

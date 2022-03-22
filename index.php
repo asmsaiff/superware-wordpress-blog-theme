@@ -14,9 +14,6 @@
             <?php
                 while(have_posts()) :
                     the_post();
-
-                    // $categories = get_the_category();
-                    // $category = $categories[mt_rand(0,count($categories)-1)];
             ?>
             <!-- begin post -->
             <div class="card">
@@ -60,14 +57,6 @@
                                                 echo get_the_date();
                                             ?>
                                         </span>
-                                        <span class="dot"></span>
-                                        <a href="<?php echo esc_url(get_category_link($category)); ?>">
-                                            <span class="post-read">
-                                                <?php
-                                                    echo esc_html( $category->name );
-                                                ?>
-                                            </span>
-                                        </a>
                                     </span>
                                     <span class="post-read-more">
                                         <a href="<?php the_permalink(); ?>">
@@ -85,9 +74,17 @@
             <!-- end post -->
             <?php
                 endwhile;
-
-                // the_posts_pagination();
             ?>
+        </div>
+
+        <div class="post-pagination mt-4 w-max mx-auto">
+            <div class="row">
+                <div class="col">
+                    <?php 
+                        the_posts_pagination();
+                    ?>
+                </div>
+            </div>
         </div>
     </section>
     <!-- End Featured -->

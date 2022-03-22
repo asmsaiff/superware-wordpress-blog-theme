@@ -62,7 +62,7 @@
                             <span class="post-name">
                                 <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ); ?>">
                                     <?php
-                                        echo esc_html(wp_trim_words(get_the_author_meta("display_name"), 1));
+                                        echo esc_html(get_the_author_meta("display_name"));
                                     ?>
                                 </a>
                             </span>
@@ -91,7 +91,7 @@
         ?>
     </div>
 
-    <div class="pagination mt-4">
+    <div class="post-pagination mt-4 w-max mx-auto">
         <div class="row">
             <div class="col">
                 <?php 
