@@ -459,4 +459,7 @@ a.text-primary.text-sm.nav-menu-create-notice {
 	.navContainer {
 		width: 100%;
 	}
+	.footer {
+		text-align: center;
+	}
 }
