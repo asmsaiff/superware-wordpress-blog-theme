@@ -54,7 +54,7 @@
                                     <span class="post-name">
                                         <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ); ?>">
                                             <?php
-                                                echo esc_html(wp_trim_words(get_the_author_meta("display_name"), 1));
+                                                echo esc_html(get_the_author_meta("display_name"));
                                             ?>
                                         </a>
                                     </span>
@@ -68,7 +68,7 @@
                                     <a href="<?php echo esc_url(get_category_link($category)); ?>">
                                         <span class="post-read">
                                             <?php
-                                                echo esc_html( $category->name );
+                                                echo esc_html( wp_trim_words( $category->name, 1 ) );
                                             ?>
                                         </span>
                                     </a>

@@ -23,6 +23,9 @@ a,a:hover {
 section {
 	margin-bottom:20px;
 }
+.w-max {
+	width: max-content;
+}
 .w-auto {
 	width: auto !important;
 }
