@@ -7,9 +7,12 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <!-- Begin Nav ================================================== -->
     <nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
-        
+        <a class="skip-link screen-reader-text" href="#content">
+            <?php _e( 'Skip to Content', 'craftnce' ); ?>
+        </a>
         <div class="container navContainer ml-0 ml-sm-auto">
             <button class="navbar-toggler navbar-toggler-right shadow-none border-0" type="button" data-toggle="collapse"
                 data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="<?php _e("Toggle navigation", "mediumish"); ?>">
