@@ -728,6 +728,15 @@ a.text-primary.text-sm.nav-menu-create-notice {
 	font-size: 14px;
 	margin-top: 8px;
 }
+img.not-found-img {
+    max-width: 330px;
+}
+.error-not-found {
+    padding: 100px 0;
+}
+.h-blank {
+    height: 300px;
+}
 
 @media screen and (max-width: 576px) {
 	.navContainer {
@@ -735,5 +744,11 @@ a.text-primary.text-sm.nav-menu-create-notice {
 	}
 	.footer {
 		text-align: center;
+	}
+	img.not-found-img {
+		width: 100%;
+	}
+	.error-not-found {
+		padding: 20px 0;
 	}
 }
