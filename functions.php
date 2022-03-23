@@ -53,6 +53,7 @@
         wp_enqueue_style("mediumish-theme-css", get_stylesheet_uri());
 
         // Scripts Enqueue
+        wp_enqueue_script( 'comment-reply' );
         wp_enqueue_script( "tether-js", get_template_directory_uri() . "/assets/js/tether.js", null, VERSION, true );
         wp_enqueue_script( "bootstrap-old-js", get_template_directory_uri() . "/assets/js/bootstrap.js", array("jquery"), VERSION, true );
         wp_enqueue_script( "viewport-js", get_template_directory_uri() . "/assets/js/ie10-viewport-bug-workaround.js", null, VERSION, true );
