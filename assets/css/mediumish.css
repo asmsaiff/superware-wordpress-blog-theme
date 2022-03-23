@@ -715,25 +715,7 @@ p.comment-form-cookies-consent input, p.comment-form-cookies-consent label {
 }
 
 #submit {
-    background-color: var(--primary-color);
-    -moz-border-radius: 28px;
-    -webkit-border-radius: 28px;
-    border-radius: 30px;
-    border: 1px solid var(--primary-color);
-    display: inline-block;
     cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 17px;
-    padding: 10px 31px;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px var(--primary-color);
-    width: max-content;
-}
-
-#submit:active { 
-    position:relative;
-    top:1px;
 }
 
 p.comment-policy {
