@@ -1,7 +1,7 @@
 <?php
     require_once(get_theme_file_path("lib/mediumish-nav.php"));
     get_template_part("inc/mediumish-plugins");
-    get_template_part("inc/mediumish-functions");
+    get_template_part("inc/option-panel/mediumish-customizer");
 
     if ( site_url() == "http://localhost/mediumish" ) {
         define( "VERSION", time() );
@@ -60,6 +60,19 @@
         wp_enqueue_script( "mediumish-js", get_template_directory_uri() . "/assets/js/mediumish.js", array("jquery"), VERSION, true );
     }
     add_action( "wp_enqueue_scripts", "mediumish_assets" );
+
+    function mediumish_sidebar() {
+        register_sidebar( array(
+            'name'          => __( 'Page Sidebar', 'mediumish' ),
+            'id'            => 'page_sidebar',
+            'description'   => __( 'Default page sidebar what will display in page if not select full width layout', 'mediumish' ),
+            'before_widget' => '<div id="%1$s" class="sidebar-area rounded-3 p-4">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="mb-1">',
+            'after_title'   => '</h4>',
+        ));
+    }
+    add_action('widgets_init', 'mediumish_sidebar');
 
     function mediumish_skip_link_focus_fix() {
         // The following is minified via `terser --compress --mangle -- js/skip-link-focus-fix.js`.
