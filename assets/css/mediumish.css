@@ -589,7 +589,9 @@ ul.tags li a:hover {
     padding: 0;
     list-style: none;
 }
-
+.comment {
+	list-style: none;
+}
 .comment-meta {
     margin-bottom: 20px;
 }
@@ -643,14 +645,6 @@ ul.tags li a:hover {
 .comments-area .comment-content ul,
 .comments-area .comment-content ol {
     padding-left: 15px;
-}
-
-.comment-reply-link {
-    background: #1e71f9;
-    display: inline-block;
-    padding: 5px 20px;
-    color: #fff;
-    border-radius: 5px;
 }
 
 .comment-list li.comment {
