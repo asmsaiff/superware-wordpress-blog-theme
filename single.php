@@ -11,7 +11,7 @@
                 <div class="share">
                     <p>
                         <?php
-                            _e("Share", "mediumish");
+                            _e("Share", "superware");
                         ?>
                     </p>
                     <ul>
@@ -30,7 +30,7 @@
                     </div>
                     <p>
                         <?php
-                            _e("Talk", "mediumish");
+                            _e("Talk", "superware");
                         ?>
                     </p>
                     <ul>
@@ -108,7 +108,7 @@
                 <!-- Begin Tags -->
                 <div class="after-post-tags d-flex"> 
                     <?php
-                        _e("Related Tags -", "mediumish");
+                        _e("Related Tags -", "superware");
                         the_tags('<ul class="ml-2 tags"><li>', '<li><li>', '</li></ul>');
                     ?>
                 </div>
@@ -119,7 +119,7 @@
                         if(comments_open()) {
                             comments_template();
                         } else {
-                            _e('<p class="py-5">You can not comment in this post right now!</p>', 'mediumish');
+                            _e('<p class="py-5">You can not comment in this post right now!</p>', 'superware');
                         }
                     ?>
                 </div>
@@ -134,7 +134,7 @@
     <div class="hideshare"></div>
 
     <?php
-        get_template_part( 'template-parts/mediumish-related-post' )
+        get_template_part( 'template-parts/superware-related-post' )
     ?>
 
 <?php

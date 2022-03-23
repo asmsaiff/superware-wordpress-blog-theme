@@ -1,20 +1,20 @@
 <?php
-    require_once(get_theme_file_path("lib/mediumish-nav.php"));
-    get_template_part("inc/mediumish-plugins");
-    get_template_part("inc/mediumish-functions");
-    get_template_part("inc/option-panel/mediumish-customizer");
-    get_template_part("inc/mediumish-featured-post-meta");
+    require_once(get_theme_file_path("lib/superware-nav.php"));
+    get_template_part("inc/superware-plugins");
+    get_template_part("inc/superware-functions");
+    get_template_part("inc/option-panel/superware-customizer");
+    get_template_part("inc/superware-featured-post-meta");
 
-    if ( site_url() == "http://localhost/mediumish" ) {
+    if ( site_url() == "http://localhost/superware" ) {
         define( "VERSION", time() );
     } else {
         define( "VERSION", wp_get_theme()->get( "Version" ) );
     }
 
-    if(!function_exists("mediumish_theme_setup")) {
-        function mediumish_theme_setup() {
+    if(!function_exists("superware_theme_setup")) {
+        function superware_theme_setup() {
             // Load Theme TextDomain
-            load_theme_textdomain("mediumish");
+            load_theme_textdomain("superware");
     
             // Theme Supports
             add_theme_support("title-tag");
@@ -40,38 +40,38 @@
             );
     
             register_nav_menus(array(
-                "primary-menu"              =>  __("Primary Menu", "mediumish"),
+                "primary-menu"              =>  __("Primary Menu", "superware"),
             ));
         }
-        add_action("after_setup_theme", "mediumish_theme_setup");
+        add_action("after_setup_theme", "superware_theme_setup");
     }
 
-    function mediumish_assets() {
+    function superware_assets() {
         // Stylesheet Enqueue
-        wp_enqueue_style("mediumish-google-font", "//fonts.googleapis.com/css?family=Righteous");
-        wp_enqueue_style("mediumish-font-awesome-css", get_template_directory_uri() . "/assets/css/font-awesome.css");
-        wp_enqueue_style("mediumish-bootstrap-old-css", get_template_directory_uri() . "/assets/css/bootstrap.css");
-        wp_enqueue_style("mediumish-main-css", get_template_directory_uri() . "/assets/css/mediumish.css");
-        wp_enqueue_style("mediumish-theme-css", get_stylesheet_uri());
+        wp_enqueue_style("superware-google-font", "//fonts.googleapis.com/css?family=Righteous");
+        wp_enqueue_style("superware-font-awesome-css", get_template_directory_uri() . "/assets/css/font-awesome.css");
+        wp_enqueue_style("superware-bootstrap-old-css", get_template_directory_uri() . "/assets/css/bootstrap.css");
+        wp_enqueue_style("superware-main-css", get_template_directory_uri() . "/assets/css/superware.css");
+        wp_enqueue_style("superware-theme-css", get_stylesheet_uri());
 
         // Scripts Enqueue
         wp_enqueue_script( 'comment-reply' );
         wp_enqueue_script( "tether-js", get_template_directory_uri() . "/assets/js/tether.js", null, VERSION, true );
         wp_enqueue_script( "bootstrap-old-js", get_template_directory_uri() . "/assets/js/bootstrap.js", array("jquery"), VERSION, true );
         wp_enqueue_script( "viewport-js", get_template_directory_uri() . "/assets/js/ie10-viewport-bug-workaround.js", null, VERSION, true );
-        wp_enqueue_script( "mediumish-js", get_template_directory_uri() . "/assets/js/mediumish.js", array("jquery"), VERSION, true );
+        wp_enqueue_script( "superware-js", get_template_directory_uri() . "/assets/js/superware.js", array("jquery"), VERSION, true );
     }
-    add_action( "wp_enqueue_scripts", "mediumish_assets" );
+    add_action( "wp_enqueue_scripts", "superware_assets" );
 
-    function mediumish_sidebar() {
+    function superware_sidebar() {
         register_sidebar( array(
-            'name'          => __( 'Page Sidebar', 'mediumish' ),
+            'name'          => __( 'Page Sidebar', 'superware' ),
             'id'            => 'page_sidebar',
-            'description'   => __( 'Default page sidebar what will display in page if not select full width layout', 'mediumish' ),
+            'description'   => __( 'Default page sidebar what will display in page if not select full width layout', 'superware' ),
             'before_widget' => '<div id="%1$s" class="sidebar-area rounded-3 p-4">',
             'after_widget'  => '</div>',
             'before_title'  => '<h4 class="mb-1">',
             'after_title'   => '</h4>',
         ));
     }
-    add_action('widgets_init', 'mediumish_sidebar');
+    add_action('widgets_init', 'superware_sidebar');

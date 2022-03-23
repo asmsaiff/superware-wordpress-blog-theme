@@ -1,5 +1,5 @@
 <?php
-    class mediumish_wp_nav_menu_walker extends Walker_Nav_Menu {
+    class superware_wp_nav_menu_walker extends Walker_Nav_Menu {
         
     private $dropdown = false;
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
@@ -139,7 +139,7 @@
                 }
                 echo sprintf( '<ul id="%s" class="%s">', $args['container_id'], $args['container_class'] ) .
                     '<li class="nav-item">' .
-                    '<a href="' . admin_url( 'nav-menus.php' ) . '" class="nav-link">' . __( 'Add a menu', 'mediumish' ) . '</a>' .
+                    '<a href="' . admin_url( 'nav-menus.php' ) . '" class="nav-link">' . __( 'Add a menu', 'superware' ) . '</a>' .
                     '</li></ul>';
                 if ( !empty( $args['container'] ) ) {
                     echo sprintf( '</%s>', $args['container'] );

@@ -1,5 +1,5 @@
 <?php
-    function mediumish_skip_link_focus_fix() {
+    function superware_skip_link_focus_fix() {
         // The following is minified via `terser --compress --mangle -- js/skip-link-focus-fix.js`.
     ?>
         <script>
@@ -7,5 +7,5 @@
         </script>
     <?php
     }
-    add_action( 'wp_print_footer_scripts', 'mediumish_skip_link_focus_fix' );
+    add_action( 'wp_print_footer_scripts', 'superware_skip_link_focus_fix' );
 

@@ -11,7 +11,7 @@
                 <div class="share">
                     <p>
                         <?php
-                            _e("Share", "mediumish");
+                            _e("Share", "superware");
                         ?>
                     </p>
                     <ul>

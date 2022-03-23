@@ -7,7 +7,7 @@
 
                     <h1 class="sitetitle my-4">
                         <?php
-                            _e("Sorry! There has no content in this query!!!", "mediumish");
+                            _e("Sorry! There has no content in this query!!!", "superware");
                         ?>
                     </h1>
                 </div>

@@ -11,18 +11,18 @@
     <!-- Begin Nav ================================================== -->
     <nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
         <a class="skip-link screen-reader-text" href="#content">
-            <?php _e( 'Skip to Content', 'mediumish' ); ?>
+            <?php _e( 'Skip to Content', 'superware' ); ?>
         </a>
         <div class="container navContainer ml-0 ml-sm-auto">
             <button class="navbar-toggler navbar-toggler-right shadow-none border-0" type="button" data-toggle="collapse"
-                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="<?php _e("Toggle navigation", "mediumish"); ?>">
+                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="<?php _e("Toggle navigation", "superware"); ?>">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
                 <?php
                     if(current_theme_supports('custom-logo')) {
-                        $mediumish_custom_logo_id = get_theme_mod( 'custom_logo' );
-                        $logo = wp_get_attachment_image_src( $mediumish_custom_logo_id , 'full' );
+                        $superware_custom_logo_id = get_theme_mod( 'custom_logo' );
+                        $logo = wp_get_attachment_image_src( $superware_custom_logo_id , 'full' );
 
                         if($logo) {
                 ?>
@@ -31,7 +31,7 @@
                         } else {
                 ?>
                 <h1 class="sitetitle">
-                    <?php _e('m', 'mediumish'); ?>
+                    <?php _e('m', 'superware'); ?>
                 </h1>
                 <?php
                         }
@@ -45,10 +45,10 @@
                             'theme_location'            =>  'primary-menu',
                             'menu_class'                =>  '',
                             'menu-container'            =>  'false',
-                            'fallback_cb'               => 'mediumish_wp_nav_menu_walker::fallback',
+                            'fallback_cb'               => 'superware_wp_nav_menu_walker::fallback',
                             'items_wrap'                => '<ul id="%1$s" class="navbar-nav ml-auto %2$s">%3$s</ul>',
                             'depth'                     => 2,
-                            'walker'                    => new mediumish_wp_nav_menu_walker(),
+                            'walker'                    => new superware_wp_nav_menu_walker(),
                         ));
                     } else {
                         echo '<a class="text-primary text-sm nav-menu-create-notice" href="'.home_url('/wp-admin/nav-menus.php').'">Create nav menu first</a>';

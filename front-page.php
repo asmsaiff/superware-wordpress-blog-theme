@@ -13,8 +13,8 @@
         </div>
         
         <?php
-            get_template_part( '/template-parts/mediumish-featured', 'post' );
-            get_template_part( '/template-parts/mediumish-all', 'post' );
+            get_template_part( '/template-parts/superware-featured', 'post' );
+            get_template_part( '/template-parts/superware-all', 'post' );
         ?>
 
 <?php

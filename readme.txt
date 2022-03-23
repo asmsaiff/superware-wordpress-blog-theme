@@ -1,4 +1,4 @@
-=== Mediumish - Blog WordPress Theme ===
+=== SuperWare - Blog WordPress Theme ===
 Developer: saifullah(dot)co
 Requires at least: 5.6
 Tested up to: 5.9.2
@@ -9,26 +9,26 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Mediumish is a agency theme.
+SuperWare is a agency theme.
 
-Take it for a spin! See how Mediumish elevates your portfolio, business website, or personal blog.
+Take it for a spin! See how SuperWare elevates your portfolio, business website, or personal blog.
 
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Mediumish in the search form and press the 'Enter' key on your keyboard.
+2. Type in SuperWare in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Navigate to 'Mediumish Options' in WordPress admin area customize to your taste. You can add contents on page from the advanced option panel there.
+4. Navigate to 'SuperWare Options' in WordPress admin area customize to your taste. You can add contents on page from the advanced option panel there.
 
 == Privacy ==
-Mediumish uses LocalStorage to save the setting when Dark Mode support is turned on or off.
+SuperWare uses LocalStorage to save the setting when Dark Mode support is turned on or off.
 LocalStorage is necessary for the setting to work and is only used when a user clicks on the Dark Mode button.
 No data is saved in the database or transferred.
 
 == Copyright ==
 
-Mediumish WordPress Theme, 2020-2021 mamurjor.com
-Mediumish is distributed under the terms of the GNU GPL.
+SuperWare WordPress Theme, 2020-2021 saifullah.co
+SuperWare is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -41,7 +41,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 
-Mediumish is derived from Saifullah, (C) 2020.
+SuperWare is derived from Saifullah, (C) 2020.
 
 Image for theme screenshot
 Copyright (c) pxhere.

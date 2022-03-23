@@ -1,5 +1,5 @@
 <?php
-    $mediumish_fp = new WP_Query(
+    $superware_fp = new WP_Query(
         array(
             'meta_key'       => 'is_featured',
             'meta_value'     => '1',
@@ -7,17 +7,17 @@
         )
     );
 
-    if ( $mediumish_fp->have_posts() ):
+    if ( $superware_fp->have_posts() ):
 ?>
 <!-- Begin Featured -->
 <section class="featured-posts">
     <div class="section-title">
-        <h2><span><?php _e("Featured", "mediumish"); ?></span></h2>
+        <h2><span><?php _e("Featured", "superware"); ?></span></h2>
     </div>
     <div class="card-columns listfeaturedtag">
         <?php
-            while($mediumish_fp->have_posts()) :
-                $mediumish_fp->the_post();
+            while($superware_fp->have_posts()) :
+                $superware_fp->the_post();
 
                 $categories = get_the_category();
                 $category = $categories[mt_rand(0,count($categories)-1)];

@@ -30,7 +30,7 @@
         <div class="section-title">
             <h2>
                 <span>
-                    <?php _e("Related Posts -", "mediumish"); ?>
+                    <?php _e("Related Posts -", "superware"); ?>
                 </span>
             </h2>
         </div>

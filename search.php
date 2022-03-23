@@ -11,7 +11,7 @@
             <h2>
                 <span>
                     <?php
-                        _e("All Stories", "mediumish");
+                        _e("All Stories", "superware");
                     ?>
                 </span>
             </h2>
