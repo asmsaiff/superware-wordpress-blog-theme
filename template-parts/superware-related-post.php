@@ -1,37 +1,58 @@
 <?php
-    $mediumish_fp = new WP_Query(
-        array(
-            'meta_key'       => 'is_featured',
-            'meta_value'     => '1',
-            'posts_per_page' => 4
-        )
-    );
+    $post_id = get_the_ID();
+    $cat_ids = array();
+    $categories = get_the_category( $post_id );
 
-    if ( $mediumish_fp->have_posts() ):
+    if(!empty($categories) && !is_wp_error($categories)):
+        foreach ($categories as $category):
+            array_push($cat_ids, $category->term_id);
+        endforeach;
+    endif;
+
+    $current_post_type = get_post_type($post_id);
+
+    $query_args = array( 
+        'category__in'   => $cat_ids,
+        'post_type'      => $current_post_type,
+        'post__not_in'    => array($post_id),
+        'posts_per_page'  => '3',
+     );
+
+    $related_cats_post = new WP_Query( $query_args );
+
+    if($related_cats_post->have_posts()):
 ?>
-<!-- Begin Featured -->
-<section class="featured-posts">
-    <div class="section-title">
-        <h2><span>Featured</span></h2>
-    </div>
-    <div class="card-columns listfeaturedtag">
-        <?php
-            while($mediumish_fp->have_posts()) :
-                $mediumish_fp->the_post();
 
-                $categories = get_the_category();
-                $category = $categories[mt_rand(0,count($categories)-1)];
-        ?>
-        <!-- begin post -->
-        <div class="card">
-            <div class="row">
-                <div class="col-md-5 wrapthumbnail">
+<!-- Begin Related
+================================================== -->
+<div class="graybg">
+    <div class="container">
+        <div class="section-title">
+            <h2>
+                <span>
+                    <?php _e("Related Posts -", "superware"); ?>
+                </span>
+            </h2>
+        </div>
+        <div class="row listrecent listrelated">
+            <?php
+                while($related_cats_post->have_posts()):
+                    $related_cats_post->the_post();
+            ?>
+            <!-- begin post -->
+            <div class="col-md-4">
+                <div <?php post_class( array('card')); ?>>
+                    <?php
+                        if(has_post_thumbnail()) :
+                    ?>
                     <a href="<?php the_permalink(); ?>">
-                        <div class="thumbnail" style="background-image: url(<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), "large")); ?>);">
-                        </div>
+                        <?php
+                            the_post_thumbnail('large', array('class'=>'img-fluid img-thumb'));
+                        ?>
                     </a>
-                </div>
-                <div class="col-md-7">
+                    <?php
+                        endif;
+                    ?>
                     <div class="card-block">
                         <h2 class="card-title">
                             <a href="<?php the_permalink(); ?>">
@@ -40,9 +61,6 @@
                                 ?>
                             </a>
                         </h2>
-                        <h4 class="card-text">
-                            <?php echo wp_trim_words( get_the_content(), 15, '...' ); ?>
-                        </h4>
                         <div class="metafooter">
                             <div class="wrapfooter">
                                 <span class="meta-footer-thumb">
@@ -85,15 +103,16 @@
                     </div>
                 </div>
             </div>
+            <!-- end post -->
+            <?php
+                endwhile;
+            ?>
         </div>
-        <!-- end post -->
-        <?php
-            endwhile;
-            wp_reset_query();
-        ?>
     </div>
-</section>
-<!-- End Featured -->
+</div>
+<!-- End Related Posts
+================================================== -->
 <?php
     endif;
+    wp_reset_query();
 ?>

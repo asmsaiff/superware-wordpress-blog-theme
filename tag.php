@@ -2,6 +2,26 @@
     get_header();
 ?>
 <div class="container" id="content">
+    <div class="section-title">
+        <h2>
+            <span>
+                <div class="mainheading">
+                    <h1 class="sitetitle">
+                        <?php single_tag_title(); ?>
+                    </h1>
+                    <?php
+                        if(tag_description()) :
+                    ?>
+                    <p class="lead mb-0">
+                        <?php echo tag_description(); ?>
+                    </p>
+                    <?php 
+                        endif; 
+                    ?>
+                </div>
+            </span>
+        </h2>
+    </div>
     <?php
         if (have_posts() ):
     ?>
@@ -83,12 +103,14 @@
                 </div>
             </div>
         </div>
-
-        <?php
-            get_sidebar();
-        ?>
     </section>
     <!-- End Featured -->
+    <?php
+        else:
+    ?>
+        <div class="alert alert-danger" role="alert">
+            A simple danger alert—check it out!
+        </div>
     <?php
         endif;
     ?>

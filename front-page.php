@@ -2,7 +2,7 @@
     get_header();
 ?>
 
-    <div class="container">
+    <div class="container" id="content">
         <div class="mainheading">
             <h1 class="sitetitle">
                 <?php bloginfo( 'name' ); ?>
@@ -13,8 +13,8 @@
         </div>
         
         <?php
-            get_template_part( '/template-parts/mediumish-featured', 'post' );
-            get_template_part( '/template-parts/mediumish-all', 'post' );
+            get_template_part( '/template-parts/superware-featured', 'post' );
+            get_template_part( '/template-parts/superware-all', 'post' );
         ?>
 
 <?php

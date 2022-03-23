@@ -1,15 +1,16 @@
 <?php
-    $mediumish_all_post = new WP_Query(array(
-        'meta_query' => [
-            'relation' => 'OR',
-            [
-                'key'     => 'is_featured',
-                'compare' => 'NOT EXISTS',
-            ]
-        ],
+    $superware_all_post = new WP_Query(array(
+        'posts_per_page'    =>  9,
+        'meta_query'        => [
+            'relation'      => 'OR',
+                [
+                    'key'     => 'is_featured',
+                    'compare' => 'NOT EXISTS',
+                ]
+            ],
     ));
 
-    if($mediumish_all_post->have_posts()) :
+    if($superware_all_post->have_posts()) :
 ?>
 
 <!-- Begin List Posts -->
@@ -18,18 +19,18 @@
         <h2>
             <span>
                 <?php
-                    _e("All Stories", "mediumish");
+                    _e("All Stories", "superware");
                 ?>
             </span>
         </h2>
     </div>
     <div class="card-columns listrecent">
         <?php
-            while($mediumish_all_post->have_posts()) :
-                $mediumish_all_post->the_post();
+            while($superware_all_post->have_posts()) :
+                $superware_all_post->the_post();
         ?>
         <!-- begin post -->
-        <div class="card">
+        <div <?php post_class( array('card')); ?>>
             <?php
                 if(has_post_thumbnail()) :
             ?>
@@ -89,16 +90,6 @@
             endwhile;
             wp_reset_query();
         ?>
-    </div>
-
-    <div class="post-pagination mt-4 w-max mx-auto">
-        <div class="row">
-            <div class="col">
-                <?php 
-                    the_posts_pagination();
-                ?>
-            </div>
-        </div>
     </div>
 </section>
 <!-- End List Posts -->
