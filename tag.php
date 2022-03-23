@@ -1,7 +1,7 @@
 <?php
     get_header();
 ?>
-<div class="container">
+<div class="container" id="content">
     <div class="section-title">
         <h2>
             <span>

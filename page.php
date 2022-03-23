@@ -4,7 +4,7 @@
 
     <!-- Begin Article
     ================================================== -->
-    <div class="container">
+    <div class="container" id="content">
         <div class="row">
             <!-- Begin Fixed Left Share -->
             <div class="col-md-2 col-xs-12">

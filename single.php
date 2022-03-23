@@ -4,7 +4,7 @@
 
     <!-- Begin Article
     ================================================== -->
-    <div class="container">
+    <div class="container" id="content">
         <div class="row">
             <!-- Begin Fixed Left Share -->
             <div class="col-md-2 col-xs-12">
@@ -112,13 +112,15 @@
                 </div>
                 <!-- End Tags -->
 
-                <?php
-                    if(comments_open()) {
-                        comments_template();
-                    } else {
-                        _e('<p class="py-5">You can not comment in this post right now!</p>', 'mediumish');
-                    }
-                ?>
+                <div id="comments">
+                    <?php
+                        if(comments_open()) {
+                            comments_template();
+                        } else {
+                            _e('<p class="py-5">You can not comment in this post right now!</p>', 'mediumish');
+                        }
+                    ?>
+                </div>
             </div>
             <!-- End Post -->
 

@@ -2,7 +2,7 @@
     get_header();
 ?>
 
-    <div class="container">
+    <div class="container" id="content">
         <div class="mainheading">
             <h1 class="sitetitle">
                 <?php bloginfo( 'name' ); ?>

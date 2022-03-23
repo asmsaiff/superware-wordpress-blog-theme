@@ -1,7 +1,7 @@
 <?php
     get_header();
 ?>
-<div class="container">
+<div class="container" id="content">
     <div class="section-title">
         <h2>
             <span>
@@ -105,9 +105,8 @@
         </div>
     </section>
     <!-- End Featured -->
-    <?php
-        else: get_template_part('template-parts/not-found');
-        endif;
-    ?>
 <?php
+        else: get_template_part('template-parts/not-found');
+    endif;
+
     get_footer();

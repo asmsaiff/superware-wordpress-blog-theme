@@ -1,7 +1,7 @@
 <?php
     get_header();
 ?>
-<div class="container">
+<div class="container" id="content">
     <?php
         if (have_posts() ):
     ?>

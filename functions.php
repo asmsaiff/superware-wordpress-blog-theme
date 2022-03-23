@@ -70,3 +70,30 @@
     <?php
     }
     add_action( 'wp_print_footer_scripts', 'mediumish_skip_link_focus_fix' );
+
+    function mediumish_search_form( $form ) {
+        $homedir      = home_url( "/" );
+        $placeholder = __( "Search", "mediumish" );
+        $post_type    = <<<PT
+    <input type="hidden" name="post_type" value="post">
+    PT;
+    
+        if ( is_post_type_archive( 'book' ) ) {
+            $post_type = <<<PT
+    <input type="hidden" name="post_type" value="book">
+    PT;
+        }
+    
+    
+        $newform = <<<FORM
+            <form class="form-inline my-2 my-lg-0 d-none d-lg-block position-relative" role="search" method="get" action="{$homedir}">
+                <input class="form-control mr-sm-2" type="search" name="s" placeholder="{$placeholder}">
+                {$post_type}
+            </form>
+    FORM;
+    
+        return $newform;
+    }
+    
+    
+    add_filter( "get_search_form", "mediumish_search_form" );
