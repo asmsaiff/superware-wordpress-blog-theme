@@ -12,7 +12,7 @@
 <!-- Begin Featured -->
 <section class="featured-posts">
     <div class="section-title">
-        <h2><span>Featured</span></h2>
+        <h2><span><?php _e("Featured", "mediumish"); ?></span></h2>
     </div>
     <div class="card-columns listfeaturedtag">
         <?php

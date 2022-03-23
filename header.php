@@ -38,7 +38,7 @@
                     }
                 ?>
             </a>
-            <div class="collapse navbar-collapse w-auto ml-auto" id="navbarsExampleDefault">
+            <div class="collapse navbar-collapse w-auto ml-auto" id="navbarNav">
                 <?php
                     if(has_nav_menu('primary-menu')) {
                         wp_nav_menu(array(
@@ -53,8 +53,6 @@
                     } else {
                         echo '<a class="text-primary text-sm nav-menu-create-notice" href="'.home_url('/wp-admin/nav-menus.php').'">Create nav menu first</a>';
                     }
-
-                    get_template_part( "/template-parts/mediumish-search", "form" );
                 ?>
             </div>
         </div>

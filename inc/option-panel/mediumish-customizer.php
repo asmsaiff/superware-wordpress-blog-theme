@@ -4,7 +4,7 @@
          * Other Controls
          */
         $wp_customize->add_section( 'mediumish_footer', array(
-            'title'    => __( 'Mediumish Footer', 'mediumish' ),
+            'title'    => __( 'mediumish Footer', 'mediumish' ),
             'priority' => '10',
             'capability' => 'edit_theme_options',
         ) );

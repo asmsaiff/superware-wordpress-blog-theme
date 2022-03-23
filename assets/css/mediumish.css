@@ -740,6 +740,30 @@ img.not-found-img {
     height: 300px;
 }
 
+/* Search Form Design */
+form#searchform {
+    position: relative;
+}
+input#searchsubmit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    height: 82%;
+    border: 1px solid #00ab6b;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    background: #00ab6b;
+    color: #fff;
+    text-transform: uppercase;
+	cursor: pointer;
+}
+input#s {
+    border-radius: 100px;
+    border: 1px solid #dbdbdb;
+    padding: 2px 5px 2px 10px;
+}
+
 @media screen and (max-width: 576px) {
 	.navContainer {
 		width: 100%;
