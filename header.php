@@ -11,7 +11,7 @@
     <!-- Begin Nav ================================================== -->
     <nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
         <a class="skip-link screen-reader-text" href="#content">
-            <?php _e( 'Skip to Content', 'craftnce' ); ?>
+            <?php _e( 'Skip to Content', 'mediumish' ); ?>
         </a>
         <div class="container navContainer ml-0 ml-sm-auto">
             <button class="navbar-toggler navbar-toggler-right shadow-none border-0" type="button" data-toggle="collapse"
