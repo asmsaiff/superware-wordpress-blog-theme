@@ -41,7 +41,7 @@
             ?>
             <!-- begin post -->
             <div class="col-md-4">
-                <div class="card">
+                <div <?php post_class( array('card')); ?>>
                     <?php
                         if(has_post_thumbnail()) :
                     ?>

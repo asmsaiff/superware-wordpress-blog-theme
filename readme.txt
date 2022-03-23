@@ -46,17 +46,52 @@ Mediumish is derived from Saifullah, (C) 2020.
 Image for theme screenshot
 Copyright (c) pxhere.
 License: CCO License, Free for personal and commercial use, No attribution required
-Source: https://pxhere.com/en/photo/644378
+Source: https://pxhere.com/en/photo/143035
 
 Image for theme screenshot
 Copyright (c) pxhere.
 License: CCO License, Free for personal and commercial use, No attribution required
-Source: https://pxhere.com/en/photo/1629587
+Source: https://pxhere.com/en/photo/140912
 
-Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com
-License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
-Copyright 2022 Fonticons, Inc.
+Image for theme screenshot
+Copyright (c) pxhere.
+License: CCO License, Free for personal and commercial use, No attribution required
+Source: https://pxhere.com/en/photo/99085
 
+Image for theme screenshot
+Copyright (c) pxhere.
+License: CCO License, Free for personal and commercial use, No attribution required
+Source: https://pxhere.com/en/photo/953511
+
+Image for theme screenshot
+Copyright (c) pxhere.
+License: CCO License, Free for personal and commercial use, No attribution required
+Source: https://pxhere.com/en/photo/1389073
+
+Image for theme screenshot
+Copyright (c) pxhere.
+License: CCO License, Free for personal and commercial use, No attribution required
+Source: https://pxhere.com/en/photo/1022924
+
+Image for theme screenshot
+Copyright (c) pxhere.
+License: CCO License, Free for personal and commercial use, No attribution required
+Source: https://pxhere.com/en/photo/1022924
+
+FontAwesome
+Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+
+Bootstrap
+Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+Copyright 2011-2017 The Bootstrap Authors
+Copyright 2011-2017 Twitter, Inc.
+Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
+IE10 viewport for Surface/desktop Windows 8 bug
+Copyright 2014-2017 The Bootstrap Authors
+Copyright 2014-2017 Twitter, Inc.
+Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 === Changelog ===
 

@@ -139,7 +139,7 @@
                 }
                 echo sprintf( '<ul id="%s" class="%s">', $args['container_id'], $args['container_class'] ) .
                     '<li class="nav-item">' .
-                    '<a href="' . admin_url( 'nav-menus.php' ) . '" class="nav-link">' . __( 'Add a menu' ) . '</a>' .
+                    '<a href="' . admin_url( 'nav-menus.php' ) . '" class="nav-link">' . __( 'Add a menu', 'mediumish' ) . '</a>' .
                     '</li></ul>';
                 if ( !empty( $args['container'] ) ) {
                     echo sprintf( '</%s>', $args['container'] );

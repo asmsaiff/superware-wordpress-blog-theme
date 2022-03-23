@@ -1,6 +1,7 @@
 <?php
     require_once(get_theme_file_path("lib/mediumish-nav.php"));
     get_template_part("inc/mediumish-plugins");
+    get_template_part("inc/mediumish-functions");
     get_template_part("inc/option-panel/mediumish-customizer");
 
     if ( site_url() == "http://localhost/mediumish" ) {
@@ -73,40 +74,3 @@
         ));
     }
     add_action('widgets_init', 'mediumish_sidebar');
-
-    function mediumish_skip_link_focus_fix() {
-        // The following is minified via `terser --compress --mangle -- js/skip-link-focus-fix.js`.
-    ?>
-        <script>
-            /(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
-        </script>
-    <?php
-    }
-    add_action( 'wp_print_footer_scripts', 'mediumish_skip_link_focus_fix' );
-
-    function mediumish_search_form( $form ) {
-        $homedir      = home_url( "/" );
-        $placeholder = __( "Search", "mediumish" );
-        $post_type    = <<<PT
-    <input type="hidden" name="post_type" value="post">
-    PT;
-    
-        if ( is_post_type_archive( 'book' ) ) {
-            $post_type = <<<PT
-    <input type="hidden" name="post_type" value="book">
-    PT;
-        }
-    
-    
-        $newform = <<<FORM
-            <form class="form-inline my-2 my-lg-0 d-none d-lg-block position-relative" role="search" method="get" action="{$homedir}">
-                <input class="form-control mr-sm-2" type="search" name="s" placeholder="{$placeholder}">
-                {$post_type}
-            </form>
-    FORM;
-    
-        return $newform;
-    }
-    
-    
-    add_filter( "get_search_form", "mediumish_search_form" );

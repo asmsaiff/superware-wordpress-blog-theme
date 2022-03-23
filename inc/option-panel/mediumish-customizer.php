@@ -45,7 +45,6 @@
          * Copyright Text
          */
         $wp_customize->add_setting('mediumish__copyright_text_settings', array(
-            'default'           => '@ Mediumish | All Right Reserved',
             'capability'        => 'edit_theme_options',
             'transport'         => 'refresh',
             'type'              => 'theme_mod',
@@ -62,7 +61,6 @@
          * Right Text
          */
         $wp_customize->add_setting('mediumish__right_text_settings', array(
-            'default'           => 'Developed by <a href="https://saifullah.co/">Saifullah Siddique</a>',
             'capability'        => 'edit_theme_options',
             'transport'         => 'refresh',
             'type'              => 'theme_mod',

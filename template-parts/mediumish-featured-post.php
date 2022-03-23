@@ -23,7 +23,7 @@
                 $category = $categories[mt_rand(0,count($categories)-1)];
         ?>
         <!-- begin post -->
-        <div class="card">
+        <div <?php post_class( array('card')); ?>>
             <div class="row">
                 <div class="col-md-5 wrapthumbnail">
                     <a href="<?php the_permalink(); ?>">

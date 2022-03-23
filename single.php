@@ -99,6 +99,8 @@
                 <div class="article-post">
                     <?php
                         the_content();
+
+                        wp_link_pages();
                     ?>
                 </div>
                 <!-- End Post Content -->

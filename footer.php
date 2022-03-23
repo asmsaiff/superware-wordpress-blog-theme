@@ -5,20 +5,21 @@
                 ?>
                 <p class="float-sm-left mb-0">
                     <?php
-                        echo get_theme_mod('mediumish__copyright_text_settings', '@ Mediumish | All Right Reserved');
+                        echo esc_html(get_theme_mod('mediumish__copyright_text_settings'));
                     ?>
                 </p>
-                <?php
+                <?php else: echo "@ Mediumish | All Right Reserved";
                     endif;
 
                     if(get_theme_mod("mediumish_footer_right_widget_show_setting", "1")) :
                 ?>
                 <p class="float-sm-right mb-0">
                     <?php
-                        echo get_theme_mod('mediumish__right_text_settings', 'Developed by <a href="https://saifullah.co/">Saifullah Siddique</a>');
+                        echo esc_html(get_theme_mod('mediumish__right_text_settings'));
                     ?>
                 </p>
                 <?php
+                    else: echo 'Developed by <a href="https://saifullah.co/">Saifullah Siddique</a>';
                     endif;
                 ?>
             </div>

@@ -1,12 +1,13 @@
 <?php
     $mediumish_all_post = new WP_Query(array(
-        'meta_query' => [
-            'relation' => 'OR',
-            [
-                'key'     => 'is_featured',
-                'compare' => 'NOT EXISTS',
-            ]
-        ],
+        'posts_per_page'    =>  9,
+        'meta_query'        => [
+            'relation'      => 'OR',
+                [
+                    'key'     => 'is_featured',
+                    'compare' => 'NOT EXISTS',
+                ]
+            ],
     ));
 
     if($mediumish_all_post->have_posts()) :
@@ -29,7 +30,7 @@
                 $mediumish_all_post->the_post();
         ?>
         <!-- begin post -->
-        <div class="card">
+        <div <?php post_class( array('card')); ?>>
             <?php
                 if(has_post_thumbnail()) :
             ?>
@@ -89,16 +90,6 @@
             endwhile;
             wp_reset_query();
         ?>
-    </div>
-
-    <div class="post-pagination mt-4 w-max mx-auto">
-        <div class="row">
-            <div class="col">
-                <?php 
-                    the_posts_pagination();
-                ?>
-            </div>
-        </div>
     </div>
 </section>
 <!-- End List Posts -->
