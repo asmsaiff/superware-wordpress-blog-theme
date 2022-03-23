@@ -3,6 +3,7 @@
     get_template_part("inc/mediumish-plugins");
     get_template_part("inc/mediumish-functions");
     get_template_part("inc/option-panel/mediumish-customizer");
+    get_template_part("inc/mediumish-featured-post-meta");
 
     if ( site_url() == "http://localhost/mediumish" ) {
         define( "VERSION", time() );
