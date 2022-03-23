@@ -3,16 +3,24 @@
 ?>
 <div class="container">
     <div class="section-title">
-        <h2><span>
-            <div class="mainheading">
-                <h1 class="sitetitle">
-                    <?php single_cat_title(); ?>
-                </h1>
-                <p class="lead mb-0">
-                    <?php bloginfo( 'description' ) ?>
-                </p>
-            </div>
-        </span></h2>
+        <h2>
+            <span>
+                <div class="mainheading">
+                    <h1 class="sitetitle">
+                        <?php single_cat_title(); ?>
+                    </h1>
+                    <?php
+                        if(category_description()) :
+                    ?>
+                    <p class="lead mb-0">
+                        <?php echo category_description(); ?>
+                    </p>
+                    <?php 
+                        endif; 
+                    ?>
+                </div>
+            </span>
+        </h2>
     </div>
     <?php
         if (have_posts() ):
@@ -98,6 +106,7 @@
     </section>
     <!-- End Featured -->
     <?php
+        else: get_template_part('template-parts/not-found');
         endif;
     ?>
 <?php
