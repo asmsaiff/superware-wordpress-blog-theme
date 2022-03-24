@@ -106,12 +106,7 @@
     </section>
     <!-- End Featured -->
     <?php
-        else:
-    ?>
-        <div class="alert alert-danger" role="alert">
-            A simple danger alert—check it out!
-        </div>
-    <?php
+            else: get_template_part('template-parts/not-found');
         endif;
     ?>
 <?php
