@@ -72,6 +72,31 @@
             'settings'          =>  'superware__right_text_settings',
             'type'              =>  'textarea',
         ));
+
+
+
+
+        $wp_customize->add_section( 'superware_general', array(
+            'title'    => __( 'SuperWare Theme Options', 'superware' ),
+            'priority' => '9',
+            'capability' => 'edit_theme_options',
+        ) );
+        
+        $wp_customize->add_setting('superware_page_title_area_show_settings', array(
+            'default'           => 1,
+            'capability'        => 'edit_theme_options',
+            'transport'         => 'refresh',
+            'type'              => 'theme_mod',
+            'sanitize_callback' => function( $input ) {
+                return ( ( isset( $input ) && true == $input ) ? true : false );
+            }
+        ));
+        $wp_customize->add_control('superware_page_title_area_show_ctrl', array(
+            'label'             =>  __('Show Page Title', 'superware'),
+            'section'           =>  'superware_general',
+            'settings'          =>  'superware_page_title_area_show_settings',
+            'type'              =>  'checkbox'
+        ));
     }
     
     add_action( 'customize_register', 'superware_customizer_settings' );

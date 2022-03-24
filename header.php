@@ -31,7 +31,7 @@
                         } else {
                 ?>
                 <h1 class="sitetitle">
-                    <?php _e('m', 'superware'); ?>
+                    <?php _e('S', 'superware'); ?>
                 </h1>
                 <?php
                         }
