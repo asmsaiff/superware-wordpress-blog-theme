@@ -4,7 +4,7 @@
 <div class="container" id="content">
     <div class="section-title">
         <h2>
-            <span>
+            <span class="pb-0">
                 <div class="mainheading">
                     <h1 class="sitetitle">
                         <?php single_tag_title(); ?>
