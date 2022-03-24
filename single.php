@@ -107,6 +107,9 @@
                 </div>
                 <!-- End Post Content -->
 
+                <?php
+                    if(the_tags()) :
+                ?>
                 <!-- Begin Tags -->
                 <div class="after-post-tags d-flex"> 
                     <?php
@@ -115,13 +118,14 @@
                     ?>
                 </div>
                 <!-- End Tags -->
+                <?php
+                    endif;
+                ?>
 
                 <div id="comments">
                     <?php
                         if(comments_open()) {
                             comments_template();
-                        } else {
-                            _e('<p class="py-5">You can not comment in this post right now!</p>', 'superware');
                         }
                     ?>
                 </div>
