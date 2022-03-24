@@ -1,5 +1,7 @@
 <?php
     get_header();
+
+    the_post();
 ?>
 
     <!-- Begin Article
@@ -62,7 +64,7 @@
                         <div class="col-md-10">
                             <a class="link-dark" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ); ?>">
                                 <?php
-                                    echo esc_html(get_the_author_meta("display_name"));
+                                    echo get_the_author_meta('display_name');
                                 ?>
                             </a>
                             <span class="author-description">
@@ -96,7 +98,7 @@
                 <!-- End Featured Image -->
 
                 <!-- Begin Post Content -->
-                <div class="article-post">
+                <div class="article-post single">
                     <?php
                         the_content();
 

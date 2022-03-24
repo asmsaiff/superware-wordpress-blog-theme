@@ -7,20 +7,18 @@
             <span class="pb-0">
                 <div class="mainheading">
                     <h1 class="sitetitle">
-                        <?php single_tag_title(); ?>
+                        <?php
+                            echo __("Posts by ", "superware") . get_the_author_meta( "display_name");
+                        ?>
                     </h1>
-                    <?php
-                        if(tag_description()) :
-                    ?>
-                    <p class="lead mb-0">
-                        <?php echo tag_description(); ?>
-                    </p>
-                    <?php 
-                        endif; 
-                    ?>
                 </div>
             </span>
         </h2>
+        <span class="author-description">
+            <?php
+                the_author_meta( "description" );
+            ?>
+        </span>
     </div>
     <?php
         if (have_posts() ):
@@ -105,14 +103,8 @@
         </div>
     </section>
     <!-- End Featured -->
-    <?php
-        else:
-    ?>
-        <div class="alert alert-danger" role="alert">
-            A simple danger alert—check it out!
-        </div>
-    <?php
-        endif;
-    ?>
 <?php
+        else: get_template_part('template-parts/not-found');
+    endif;
+
     get_footer();
