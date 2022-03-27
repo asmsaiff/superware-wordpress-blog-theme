@@ -56,9 +56,9 @@
 
         // Scripts Enqueue
         wp_enqueue_script( 'comment-reply' );
-        wp_enqueue_script( "tether-js", get_template_directory_uri() . "/assets/js/tether.js", null, VERSION, true );
-        wp_enqueue_script( "bootstrap-old-js", get_template_directory_uri() . "/assets/js/bootstrap.js", array("jquery"), VERSION, true );
-        wp_enqueue_script( "viewport-js", get_template_directory_uri() . "/assets/js/ie10-viewport-bug-workaround.js", null, VERSION, true );
+        wp_enqueue_script( "superware-tether-js", get_template_directory_uri() . "/assets/js/tether.js", null, VERSION, true );
+        wp_enqueue_script( "superware-bootstrap-old-js", get_template_directory_uri() . "/assets/js/bootstrap.js", array("jquery"), VERSION, true );
+        wp_enqueue_script( "superware-viewport-js", get_template_directory_uri() . "/assets/js/ie10-viewport-bug-workaround.js", null, VERSION, true );
         wp_enqueue_script( "superware-js", get_template_directory_uri() . "/assets/js/superware.js", array("jquery"), VERSION, true );
     }
     add_action( "wp_enqueue_scripts", "superware_assets" );
