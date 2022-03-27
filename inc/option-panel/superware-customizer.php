@@ -45,10 +45,11 @@
          * Copyright Text
          */
         $wp_customize->add_setting('superware__copyright_text_settings', array(
-            'capability'        => 'edit_theme_options',
-            'transport'         => 'refresh',
-            'type'              => 'theme_mod',
-            'sanitize_callback' => 'sanitize_text_field'
+            'default'           =>  '@ SuperWare | All Right Reserved',
+            'capability'        =>  'edit_theme_options',
+            'transport'         =>  'refresh',
+            'type'              =>  'theme_mod',
+            'sanitize_callback' =>  'sanitize_text_field'
         ));
         $wp_customize->add_control('superware__copyright_text_ctrl', array(
             'label'             =>  __('Copyright Text', 'superware'),
