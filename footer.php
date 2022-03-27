@@ -6,9 +6,7 @@
                 <p class="float-sm-left mb-0">
                     <?php
                         if(get_theme_mod('superware__copyright_text_settings')) {
-                            echo esc_html(get_theme_mod('superware__copyright_text_settings'));
-                        } else {
-                            echo "@ superware | All Right Reserved";
+                            echo esc_html(get_theme_mod('superware__copyright_text_settings', '@ SuperWare | All Right Reserved'));
                         }
                     ?>
                 </p>
