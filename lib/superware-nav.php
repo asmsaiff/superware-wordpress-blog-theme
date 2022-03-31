@@ -77,7 +77,7 @@
                 $atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
 
             if ( $args->walker->has_children ) {
-                $atts['data-toggle'] = 'dropdown';
+                // $atts['data-toggle'] = 'dropdown';
                 $atts['aria-haspopup'] = 'true';
                 $atts['aria-expanded'] = 'false';
             }
@@ -98,7 +98,8 @@
             $item_classes = array( 'nav-link' );
 
             if ( $args->walker->has_children ) {
-                $item_classes[] = 'dropdown-toggle';
+                // $item_classes[] = 'dropdown-toggle';
+                $item_classes[] = 'dropdown-nav';
             }
 
             if ( 0 < $depth ) { $item_classes=array_diff( $item_classes, [ 'nav-link' ] );
