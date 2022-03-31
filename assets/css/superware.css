@@ -780,3 +780,22 @@ input#s {
 		padding: 20px 0;
 	}
 }
+
+.dropdown-nav::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.3em;
+    vertical-align: middle;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown:active .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
