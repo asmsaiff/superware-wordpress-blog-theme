@@ -3,7 +3,7 @@ Contributors: saifullahsiddique
 Requires at least: 5.6
 Tested up to: 5.9
 Requires PHP: 5.6
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,5 +95,5 @@ Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 === Changelog ===
 
-v1.0.0
+v1.0.5
 - Initial Theme Release
