@@ -1,9 +1,3 @@
-/*
-Template Name:Mediumish
-Copyright:WowThemes.net,https://www.wowthemes.net
-Version:1.0.1
-License: https://www.wowthemes.net/freebies-license/
-*/
 body {
 	padding-top:5rem;
 }
@@ -13,8 +7,10 @@ body {
 a {
     color: #00ab6b;
 }
+.nav-link:focus,
+.navbar-brand:focus,
 a.nav-link.dropdown-toggle:focus {
-    border-bottom: 2px solid #00ab6b;
+    outline: 1px dotted #000;
 }
 .article-post.single a {
 	text-decoration: underline;
@@ -311,11 +307,11 @@ span.post-name a,span.post-read-more a:hover {
 .mediumnavigation .navbar-brand {
 	font-weight:500;
 }
-.mediumnavigation .dropdown-menu {
+.mediumnavigation .sub-menu {
 	border:1px solid rgba(0,0,0,0.08);
 	margin:.5rem 0 0;
 }
-.mediumnavigation .nav-item,.dropdown-menu {
+.mediumnavigation .nav-item,.sub-menu {
 	font-size:0.9rem;
 }
 .mediumnavigation .search-icon {
