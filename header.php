@@ -31,7 +31,7 @@
                         } else {
                 ?>
                 <h1 class="sitetitle">
-                    <?php _e('S', 'superware'); ?>
+                    <?php bloginfo( 'name' ); ?>
                 </h1>
                 <?php
                         }
@@ -43,7 +43,7 @@
                     if(has_nav_menu('primary-menu')) {
                         wp_nav_menu(array(
                             'theme_location'            =>  'primary-menu',
-                            'menu_class'                =>  '',
+                            'menu_class'                =>  'main-menu',
                             'menu-container'            =>  'false',
                             'fallback_cb'               => 'superware_wp_nav_menu_walker::fallback',
                             'items_wrap'                => '<ul id="%1$s" class="navbar-nav ml-auto %2$s">%3$s</ul>',
