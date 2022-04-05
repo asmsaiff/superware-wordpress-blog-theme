@@ -98,6 +98,34 @@
             'settings'          =>  'superware_page_title_area_show_settings',
             'type'              =>  'checkbox'
         ));
+
+        $wp_customize->add_setting('superware__page_title_settings', array(
+            'default'           =>  'SuperWare',
+            'capability'        =>  'edit_theme_options',
+            'transport'         =>  'refresh',
+            'type'              =>  'theme_mod',
+            'sanitize_callback' =>  'sanitize_text_field'
+        ));
+        $wp_customize->add_control('superware__page_title_ctrl', array(
+            'label'             =>  __('Page Title', 'superware'),
+            'section'           =>  'superware_footer',
+            'settings'          =>  'superware__page_title_settings',
+            'type'              =>  'text',
+        ));
+
+        $wp_customize->add_setting('superware__page_desc_settings', array(
+            'default'           =>  'SuperWare is a simple wordpress blog theme with clean layout.',
+            'capability'        =>  'edit_theme_options',
+            'transport'         =>  'refresh',
+            'type'              =>  'theme_mod',
+            'sanitize_callback' =>  'sanitize_textarea_field'
+        ));
+        $wp_customize->add_control('superware__page_desc_ctrl', array(
+            'label'             =>  __('Page Description', 'superware'),
+            'section'           =>  'superware_footer',
+            'settings'          =>  'superware__page_desc_settings',
+            'type'              =>  'textarea',
+        ));
     }
     
     add_action( 'customize_register', 'superware_customizer_settings' );
