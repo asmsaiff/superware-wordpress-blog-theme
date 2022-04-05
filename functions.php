@@ -4,12 +4,9 @@
     get_template_part("inc/superware-functions");
     get_template_part("inc/option-panel/superware-customizer");
     get_template_part("inc/superware-featured-post-meta");
-
-    if ( site_url() == "http://localhost/superware" ) {
-        define( "VERSION", time() );
-    } else {
-        define( "VERSION", wp_get_theme()->get( "Version" ) );
-    }
+    
+    // Assets Version
+    define( "VERSION", wp_get_theme()->get( "Version" ) );
 
     if(!function_exists("superware_theme_setup")) {
         function superware_theme_setup() {
