@@ -2,11 +2,11 @@
     if( function_exists('acf_add_local_field_group') ):
         acf_add_local_field_group(array(
             'key' => 'group_6239c8b1d56c9',
-            'title' => 'Is Featured?',
+            'title' => __('Is Featured?', 'superware'),
             'fields' => array(
                 array(
                     'key' => 'field_6239c8bf5ff1c',
-                    'label' => 'Is Featured?',
+                    'label' => __('Is Featured?', 'superware'),
                     'name' => 'is_featured',
                     'type' => 'true_false',
                     'instructions' => '',
