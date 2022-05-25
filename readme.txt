@@ -1,9 +1,9 @@
 === SuperWare - Blog WordPress Theme ===
 Contributors: saifullahsiddique
 Requires at least: 5.6
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,10 @@ Copyright 2014-2017 Twitter, Inc.
 Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 === Changelog ===
+
+v1.0.9
+- Fix post asc/desc sorting issues
+- Design modification for post grid
 
 v1.0.8
 - Fix copyright text not display issue

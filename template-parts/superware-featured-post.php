@@ -14,7 +14,7 @@
     <div class="section-title">
         <h2><span><?php _e("Featured", "superware"); ?></span></h2>
     </div>
-    <div class="card-columns listfeaturedtag">
+    <div class="listfeaturedtag">
         <?php
             while($superware_fp->have_posts()) :
                 $superware_fp->the_post();
