@@ -162,11 +162,11 @@ section {
 	padding-bottom:20px;
 	margin-bottom:-1px;
 }
-@media (min-width:576px) {
-	.card-columns.listfeaturedtag {
-		-webkit-column-count:2;
-		-moz-column-count:2;
-		column-count:2;
+@media (min-width:768px) {
+	.listfeaturedtag {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.25rem;
 	}
 }
 @media (min-width:992px) {
@@ -281,7 +281,7 @@ span.post-name a,span.post-read-more a:hover {
 	color:rgba(0,0,0,.8);
 }
 .dot:after {
-	content:"·";
+	content: " · ";
 	margin-left:3px;
 	margin-right:3px;
 }
