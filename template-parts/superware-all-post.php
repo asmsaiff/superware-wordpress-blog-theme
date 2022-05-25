@@ -5,7 +5,8 @@
             'relation'      => 'OR',
                 [
                     'key'     => 'is_featured',
-                    'compare' => 'NOT EXISTS',
+                    'value'   => '1',
+                    'compare' => '<',
                 ]
             ],
     ));
