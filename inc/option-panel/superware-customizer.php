@@ -41,6 +41,7 @@
             'type'              =>  'checkbox'
         ));
 
+
         /**
          * Copyright Text
          */
@@ -49,7 +50,7 @@
             'capability'        =>  'edit_theme_options',
             'transport'         =>  'refresh',
             'type'              =>  'theme_mod',
-            'sanitize_callback' =>  'sanitize_text_field'
+            'sanitize_callback' =>  'sanitize_textarea_field'
         ));
         $wp_customize->add_control('superware__copyright_text_ctrl', array(
             'label'             =>  __('Copyright Text', 'superware'),
@@ -108,11 +109,10 @@
         ));
         $wp_customize->add_control('superware__page_title_ctrl', array(
             'label'             =>  __('Page Title', 'superware'),
-            'section'           =>  'superware_footer',
+            'section'           =>  'superware_general',
             'settings'          =>  'superware__page_title_settings',
             'type'              =>  'text',
         ));
-
         $wp_customize->add_setting('superware__page_desc_settings', array(
             'default'           =>  'SuperWare is a simple wordpress blog theme with clean layout.',
             'capability'        =>  'edit_theme_options',
@@ -122,7 +122,7 @@
         ));
         $wp_customize->add_control('superware__page_desc_ctrl', array(
             'label'             =>  __('Page Description', 'superware'),
-            'section'           =>  'superware_footer',
+            'section'           =>  'superware_general',
             'settings'          =>  'superware__page_desc_settings',
             'type'              =>  'textarea',
         ));
