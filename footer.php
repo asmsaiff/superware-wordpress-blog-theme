@@ -5,7 +5,7 @@
                 ?>
                 <p class="float-sm-left mb-0">
                     <?php
-                        echo esc_html(get_theme_mod('superware__copyright_text_settings', '@ SuperWare | All Right Reserved'));
+                        echo esc_html(get_theme_mod('superware__copyright_text_settings', '&copy; SuperWare&trade; | All Right Reserved'));
                     ?>
                 </p>
                 <?php
@@ -15,8 +15,6 @@
                 ?>
                 <p class="float-sm-right mb-0">
                     <?php
-                        echo esc_html(get_theme_mod('superware__right_text_settings'));
-
                         if(get_theme_mod('superware__right_text_settings')) {
                             echo esc_html(get_theme_mod('superware__right_text_settings'));
                         } else {
