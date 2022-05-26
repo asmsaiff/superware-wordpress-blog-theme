@@ -3,11 +3,15 @@
         'posts_per_page'    =>  9,
         'meta_query'        => [
             'relation'      => 'OR',
-                [
-                    'key'     => 'is_featured',
-                    'value'   => '1',
-                    'compare' => '<',
-                ]
+                array(
+                    'key'       => 'is_featured',
+                    'value'     => 1,
+                    'compare'   => '!='
+                ),
+                array(
+                    'key'       => 'is_featured',
+                    'compare'   => 'NOT EXISTS'
+                )
             ],
     ));
 
