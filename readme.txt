@@ -95,7 +95,7 @@ Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 === Changelog ===
 
-v1.0.9
+v1.1.0
 - WP 6.0 version compatibility check
 - Fix bugs and issues
 - Improve design of the post grid
