@@ -326,6 +326,7 @@ span.post-name a,span.post-read-more a:hover {
 }
 .sitetitle {
 	font-family:Righteous;
+	font-size: 1.8rem;
 }
 .mainheading h1.posttitle {
 	font-weight:700;
