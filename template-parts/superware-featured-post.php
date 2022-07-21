@@ -36,7 +36,7 @@
                         <h2 class="card-title">
                             <a href="<?php the_permalink(); ?>">
                                 <?php
-                                    the_title();
+                                    echo wp_trim_words( get_the_title(), 6, '...' );
                                 ?>
                             </a>
                         </h2>
