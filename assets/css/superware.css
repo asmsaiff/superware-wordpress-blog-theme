@@ -720,6 +720,10 @@ p.comment-form-cookies-consent input, p.comment-form-cookies-consent label {
     width: max-content;
     padding: 5px 25px;
     font-size: 13px;
+	transition: .2s all ease-in-out;
+}
+#submit:hover {
+	background: #008b58;
 }
 
 p.comment-policy {
