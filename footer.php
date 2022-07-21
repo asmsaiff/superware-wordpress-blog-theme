@@ -1,5 +1,5 @@
         <div class="footer mt-0 py-3">
-            <div class="container">
+            <div class="container px-0">
                 <?php
                     if(get_theme_mod("superware_footer_left_widget_show_setting", 1)) :
                 ?>
