@@ -740,7 +740,10 @@ p.comment-policy {
 
 a.text-primary.text-sm.nav-menu-create-notice {
 	font-size: 14px;
-	margin-top: 8px;
+	text-decoration: underline;
+}
+a.text-primary.text-sm.nav-menu-create-notice:hover {
+	text-decoration: none;
 }
 img.not-found-img {
     max-width: 330px;
