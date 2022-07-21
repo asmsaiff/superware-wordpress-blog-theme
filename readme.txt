@@ -109,13 +109,9 @@ v1.1.0
 - Fix bugs and issues
 - Improve design of the post grid
 - Improve performance
-
-v1.0.9
 - Fix post asc/desc sorting issues
 - Design modification for post grid
-
-v1.0.8
 - Fix copyright text not display issue
 
-v1.0.5
+v1.0.0
 - Initial Theme Release
