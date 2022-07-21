@@ -714,6 +714,12 @@ p.comment-form-cookies-consent input, p.comment-form-cookies-consent label {
 
 #submit {
     cursor: pointer;
+    background: #00ab6b;
+    border: 1px solid #00ab6b;
+    color: #fff;
+    width: max-content;
+    padding: 5px 25px;
+    font-size: 13px;
 }
 
 p.comment-policy {
