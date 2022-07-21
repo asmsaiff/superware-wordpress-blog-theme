@@ -201,7 +201,7 @@ section {
 	padding-left:0;
 }
 .listfeaturedtag h2.card-title,.listrecent h2.card-title {
-	font-size:1.3rem;
+	font-size:1.2rem;
 	font-weight:700;
 	line-height: 1.25;
 }
@@ -281,7 +281,7 @@ span.post-name a,span.post-read-more a:hover {
 	color:rgba(0,0,0,.8);
 }
 .dot:after {
-	content: " · ";
+	content: "·";
 	margin-left:3px;
 	margin-right:3px;
 }
@@ -326,6 +326,7 @@ span.post-name a,span.post-read-more a:hover {
 }
 .sitetitle {
 	font-family:Righteous;
+	font-size: 1.8rem;
 }
 .mainheading h1.posttitle {
 	font-weight:700;
@@ -714,6 +715,16 @@ p.comment-form-cookies-consent input, p.comment-form-cookies-consent label {
 
 #submit {
     cursor: pointer;
+    background: #00ab6b;
+    border: 1px solid #00ab6b;
+    color: #fff;
+    width: max-content;
+    padding: 5px 25px;
+    font-size: 13px;
+	transition: .2s all ease-in-out;
+}
+#submit:hover {
+	background: #008b58;
 }
 
 p.comment-policy {
@@ -730,7 +741,10 @@ p.comment-policy {
 
 a.text-primary.text-sm.nav-menu-create-notice {
 	font-size: 14px;
-	margin-top: 8px;
+	text-decoration: underline;
+}
+a.text-primary.text-sm.nav-menu-create-notice:hover {
+	text-decoration: none;
 }
 img.not-found-img {
     max-width: 330px;

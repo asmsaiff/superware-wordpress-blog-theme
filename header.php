@@ -30,7 +30,7 @@
                 <?php
                         } else {
                 ?>
-                <h1 class="sitetitle">
+                <h1 class="sitetitle mb-0">
                     <?php bloginfo( 'name' ); ?>
                 </h1>
                 <?php

@@ -126,6 +126,7 @@ audio:not([controls]) {
 
 img {
     border-style: none;
+    max-width: 100%;
 }
 
 svg:not(:root) {
@@ -601,7 +602,7 @@ h6 {
 }
 
 .lead {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 300;
 }
 

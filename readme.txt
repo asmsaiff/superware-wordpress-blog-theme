@@ -3,7 +3,7 @@ Contributors: saifullahsiddique
 Requires at least: 5.9
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,18 +95,23 @@ Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 === Changelog ===
 
-v1.0.9
+v1.1.1
+- Design improvements for comments template
+- Fix design issues
+- Trim featured post title
+- Image resize issue solved
+- Troubleshoot theme issues and resolve
+- Improve performance
+- Implement latest wordpress trends
+
+v1.1.0
 - WP 6.0 version compatibility check
 - Fix bugs and issues
 - Improve design of the post grid
 - Improve performance
-
-v1.0.9
 - Fix post asc/desc sorting issues
 - Design modification for post grid
-
-v1.0.8
 - Fix copyright text not display issue
 
-v1.0.5
+v1.0.0
 - Initial Theme Release
