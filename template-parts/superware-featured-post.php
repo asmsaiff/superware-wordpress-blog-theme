@@ -21,18 +21,26 @@
 
                 $categories = get_the_category();
                 $category = $categories[mt_rand(0,count($categories)-1)];
+
+                $thumb_url = get_the_post_thumbnail_url(get_the_ID(), "large");
         ?>
         <!-- begin post -->
         <div <?php post_class( array('card')); ?>>
             <div class="row">
+                <?php
+                    if($thumb_url) :
+                ?>
                 <div class="col-md-5 wrapthumbnail">
                     <a href="<?php the_permalink(); ?>">
-                        <div class="thumbnail" style="background-image: url(<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), "large")); ?>);">
+                        <div class="thumbnail" style="background-image: url(<?php echo esc_url($thumb_url); ?>);">
                         </div>
                     </a>
                 </div>
-                <div class="col-md-7">
-                    <div class="card-block">
+                <?php
+                    endif;
+                ?>
+                <div class="col-md-<?php echo esc_attr($thumb_url ? "7" : "12"); ?>">
+                    <div class="card-block <?php echo esc_attr($thumb_url ? "pl-0" : "pl-4"); ?>">
                         <h2 class="card-title">
                             <a href="<?php the_permalink(); ?>">
                                 <?php
@@ -44,7 +52,7 @@
                             <?php echo wp_trim_words( get_the_content(), 15, '...' ); ?>
                         </h4>
                         <div class="metafooter">
-                            <div class="wrapfooter">
+                            <div class="wrapfooter" style="position: unset;">
                                 <span class="meta-footer-thumb">
                                     <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ); ?>">
                                         <img class="author-thumb" src="<?php echo esc_url(get_avatar_url(get_the_author_meta("ID"))); ?>" alt="<?php the_title(); ?>">
