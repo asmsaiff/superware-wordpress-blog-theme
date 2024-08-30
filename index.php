@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-md-5 wrapthumbnail">
                         <a href="<?php the_permalink(); ?>">
-                            <div class="thumbnail" style="background-image: url(<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), "large")); ?>);">
+                            <div class="thumbnail" style="background-image: url(<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), "full")); ?>);">
                             </div>
                         </a>
                     </div>
@@ -77,7 +77,7 @@
         <div class="post-pagination mt-4 w-max mx-auto">
             <div class="row">
                 <div class="col">
-                    <?php 
+                    <?php
                         the_posts_pagination();
                     ?>
                 </div>
