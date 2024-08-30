@@ -12,4 +12,8 @@
             }
         });
     });
+
+    if ($('#wpadminbar')[0]) {
+        $('nav').css('top', '32px')
+    }
 }(jQuery));
