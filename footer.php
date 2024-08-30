@@ -18,7 +18,7 @@
                         if(get_theme_mod('superware__right_text_settings')) {
                             echo esc_html(get_theme_mod('superware__right_text_settings'));
                         } else {
-                            echo 'Developed by <a href="https://saifullah.co/" target="_blank" >Saifullah Siddique</a>';
+                            echo 'Developed by <a href="https://saif.im" target="_blank" >S. Saif</a>';
                         }
                     ?>
                 </p>
