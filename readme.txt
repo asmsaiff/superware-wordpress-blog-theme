@@ -1,9 +1,9 @@
 === SuperWare - Blog WordPress Theme ===
 Contributors: saifullahsiddique
-Requires at least: 5.9
-Tested up to: 6.0
-Requires PHP: 5.6
-Stable tag: 1.1.1
+Requires at least: 6.6
+Tested up to: 6.6.1
+Requires PHP: 7.4
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,13 @@ Copyright 2014-2017 Twitter, Inc.
 Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 === Changelog ===
+v1.1.2
+- Fix design issues
+- Security enhance
+- Latest version support for wordpress and php
+- Update header overlapping issue on wp-admin area
+- Remove unused code and files
+- Optimize code
 
 v1.1.1
 - Design improvements for comments template
