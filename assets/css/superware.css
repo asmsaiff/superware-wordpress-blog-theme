@@ -36,43 +36,43 @@ section {
 .alignnone {
     margin: 5px 20px 20px 0;
   }
-  
+
   .aligncenter,
   div.aligncenter {
     display: block;
     margin: 5px auto 5px auto;
   }
-  
+
   .alignright {
     float:right;
     margin: 5px 0 20px 20px;
   }
-  
+
   .alignleft {
     float: left;
     margin: 5px 20px 20px 0;
   }
-  
+
   a img.alignright {
     float: right;
     margin: 5px 0 20px 20px;
   }
-  
+
   a img.alignnone {
     margin: 5px 20px 20px 0;
   }
-  
+
   a img.alignleft {
     float: left;
     margin: 5px 20px 20px 0;
   }
-  
+
   a img.aligncenter {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .wp-caption {
     background: #fff;
     border: 1px solid #f0f0f0;
@@ -80,19 +80,19 @@ section {
     padding: 5px 3px 10px;
     text-align: center;
   }
-  
+
   .wp-caption.alignnone {
     margin: 5px 20px 20px 0;
   }
-  
+
   .wp-caption.alignleft {
     margin: 5px 20px 20px 0;
   }
-  
+
   .wp-caption.alignright {
     margin: 5px 0 20px 20px;
   }
-  
+
   .wp-caption img {
     border: 0 none;
     height: auto;
@@ -101,14 +101,14 @@ section {
     padding: 0;
     width: auto;
   }
-  
+
   .wp-caption p.wp-caption-text {
     font-size: 11px;
     line-height: 17px;
     margin: 0;
     padding: 0 4px 5px;
   }
-  
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
@@ -122,7 +122,7 @@ section {
   width: 1px;
   word-wrap: normal !important;
 }
-  
+
 .screen-reader-text:focus {
   background-color: #eee;
   clip: auto !important;
@@ -579,7 +579,7 @@ ul.tags li a:hover {
 ========================================*/
 
 /* Highlight active form field */
-    
+
 .comments-area {
     margin-top: 40px;
 }
